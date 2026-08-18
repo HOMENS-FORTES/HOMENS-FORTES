@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Homens Fortes | Centro de Tratamento</title>
+
+    <style>
+
+        /* =========================
+           CONFIGURAÇÕES GERAIS
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+
+            /* FOTO DE FUNDO */
+            background-image: url("imagens/fundo.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+
+            min-height: 100vh;
+        }
+
+
+        /* =========================
+           CABEÇALHO
+        ========================= */
+
+        header {
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #ddd;
+        }
+
+
+        /* =========================
+           MENU
+        ========================= */
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #25D366;
+        }
+
+
+        /* =========================
+           ÁREA PRINCIPAL
+        ========================= */
+
+        main {
+            padding: 30px 15px;
+        }
+
+
+        /* =========================
+           SEÇÕES
+        ========================= */
+
+        .secao {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 60px 30px;
+
+            background: rgba(255, 255, 255, 0.94);
+
+            border-radius: 18px;
+
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+            text-align: center;
+        }
+
+        .secao h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #123c2a;
+        }
+
+        .secao p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           BOTÃO WHATSAPP
+        ========================= */
+
+        .botao {
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 16px 32px;
+
+            background: #25D366;
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            border-radius: 40px;
+
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: #1ebe5d;
+            transform: scale(1.05);
+        }
+
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+
+            margin-top: 35px;
+        }
+
+        .card {
+            width: 300px;
+
+            padding: 30px 25px;
+
+            background: white;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            color: #123c2a;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           GALERIA
+        ========================= */
+
+        .galeria img {
+            display: block;
+
+            width: 100%;
+            max-width: 850px;
+
+            margin: 30px auto 0;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* =========================
+           CONTATO
+        ========================= */
+
+        .contato {
+            padding-bottom: 70px;
+        }
+
+        .numero {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #123c2a;
+        }
+
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 15px;
+
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           CELULAR
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .secao {
+                padding: 40px 20px;
+            }
+
+            .secao h2 {
+                font-size: 26px;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            .botao {
+                font-size: 16px;
+                padding: 14px 25px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         CABEÇALHO
+    ========================= -->
+
+    <header>
+
+        <h1>HOMENS FORTES</h1>
+
+        <p>Centro de Tratamento</p>
+
+        <nav>
+
+            <a href="#inicio">Início</a>
+
+            <a href="#sobre">Sobre</a>
+
+            <a href="#estrutura">Estrutura</a>
+
+            <a href="#contato">Contato</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- =========================
+             INÍCIO
+        ========================= -->
+
+        <section id="inicio" class="secao">
+
+            <h2>Bem-vindo à Homens Fortes</h2>
+
+            <p>
+                Atendimento especializado e uma equipe preparada
+                para ajudar você.
+            </p>
+
+            <a
+                class="botao"
+                href="https://wa.me/5511978975547"
+                target="_blank"
+            >
+                Falar no WhatsApp
+            </a>
+
+        </section>
+
+
+
+        <!-- =========================
+             POR QUE ESCOLHER
+        ========================= -->
+
+        <section id="sobre" class="secao">
+
+            <h2>Por que escolher nossa empresa?</h2>
+
+            <div class="cards">
+
+
+                <div class="card">
+
+                    <h3>Atendimento</h3>
+
+                    <p>
+                        Equipe preparada para oferecer
+                        o melhor atendimento.
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <h3>Qualidade</h3>
+
+                    <p>
+                        Trabalhamos com dedicação,
+                        cuidado e responsabilidade.
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <h3>Experiência</h3>
+
+                    <p>
+                        Um ambiente preparado para
+                        receber e acolher você.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ESTRUTURA
+        ========================= -->
+
+        <section id="estrutura" class="secao galeria">
+
+            <h2>Conheça nossa estrutura</h2>
+
+            <p>
+                Conheça um pouco do nosso ambiente.
+            </p>
+
+            <img
+                src="imagens/casa1.jpg"
+                alt="Estrutura da Homens Fortes"
+            >
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTATO
+        ========================= -->
+
+        <section id="contato" class="secao contato">
+
+            <h2>Entre em contato</h2>
+
+            <p>
+                Estamos prontos para atender você.
+            </p>
+
+            <p class="numero">
+                (11) 97897-5547
+            </p>
+
+            <a
+                class="botao"
+                href="https://wa.me/5511978975547"
+                target="_blank"
+            >
+                Chamar no WhatsApp
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Homens Fortes - Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
